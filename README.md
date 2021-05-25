@@ -10,7 +10,7 @@
 - [Coding Rules](#coding-rules)
   - [Code Style](#code-style)
     - [Markdown](#markdown)
-    - [GDScrip](#gdscript)
+    - [GDScript](#gdscript)
 - [Commit Message Guidelines](#commit-message-guidelines)
   - [Commit Message Format](#commit-message-format)
   - [Revert](#revert)
@@ -109,7 +109,7 @@ This project performs Markdown linting using [markdownlint](https://marketplace.
 
 #### GDScript
 
-This project adheres to the [GDScrip style guide](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_styleguide.html).
+This project adheres to the [GDScript style guide](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_styleguide.html).
 
 ## Commit Message Guidelines
 
