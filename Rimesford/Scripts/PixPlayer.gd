@@ -33,18 +33,23 @@ func _physics_process(delta):
 	var velocity = get_input()
 	
 	# Pick animaiton
-	if velocity.y > 0:
-		$Area2D/AnimatedSprite.animation = "walk_front"
-		face_front = true
-	if velocity.y < 0:
-		$Area2D/AnimatedSprite.animation = "walk_back"
-		face_front = false
-	if velocity.y == 0 and face_front:
-		$Area2D/AnimatedSprite.animation = "idle_front"
-	if velocity.y == 0 and not face_front:
-		$Area2D/AnimatedSprite.animation = "idle_back"
-		
-	# TODO: add left and right when animations are finished
+	if velocity.y != 0:
+		if velocity.y > 0:
+			$Area2D/AnimatedSprite.animation = "walk_front"
+			face_front = true
+		else:
+			$Area2D/AnimatedSprite.animation = "walk_back"
+			face_front = false
+	elif velocity.x != 0:
+		$Area2D/AnimatedSprite.animation = "walk_side"
+		$Area2D/AnimatedSprite.flip_h = not velocity.x < 0
+	else:
+		if face_front:
+			$Area2D/AnimatedSprite.animation = "idle_front"
+		else:
+			$Area2D/AnimatedSprite.animation = "idle_back"
+
+
 		
 	# Move the character
 	velocity = move_and_slide(velocity)
