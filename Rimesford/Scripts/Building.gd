@@ -1,4 +1,5 @@
-extends KinematicBody2D
+tool
+extends StaticBody2D
 
 
 # Declare member variables here
@@ -26,11 +27,10 @@ func _ready():
 	# Set the bottom of the building
 	building_bottom = sprite_size.y / 2
 	
-
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if typeof(area_touching) != TYPE_INT and area_touching.get_owner().name == "PixPlayer":
+func _physics_process(delta):
+	if typeof(area_touching) != TYPE_INT and area_touching.get_owner().is_in_group("player"):
 		var feet = to_local(area_touching.global_position).y + area_touching.get_owner().feet.y
 
 		if in_contact:
@@ -39,7 +39,8 @@ func _process(delta):
 			else:
 				$HouseSprite.z_index = -1
 
-
+func _process(delta):
+	$HouseSprite.animation = house_num
 
 func _on_BuildingArea_area_entered(area):
 	area_touching = area

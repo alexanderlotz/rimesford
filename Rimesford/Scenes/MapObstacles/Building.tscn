@@ -11,7 +11,7 @@
 [ext_resource path="res://Assets/Art/Sprites/Pixel/House6.tres" type="Texture" id=9]
 [ext_resource path="res://Scripts/Building.gd" type="Script" id=10]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41, 46 )
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -39,19 +39,19 @@ animations = [ {
 "name": "1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "3",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "4",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "5",
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "7",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
@@ -59,13 +59,14 @@ animations = [ {
 "name": "6",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "7",
+"name": "5",
 "speed": 5.0
 } ]
 
-[node name="Building" type="KinematicBody2D"]
+[node name="Building" type="StaticBody2D"]
+position = Vector2( -0.163773, 0 )
 script = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
@@ -73,7 +74,7 @@ __meta__ = {
 house_num = "1"
 
 [node name="BaseCollider" type="CollisionShape2D" parent="."]
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="BuildingArea" type="Area2D" parent="."]
 
