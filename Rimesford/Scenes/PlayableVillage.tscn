@@ -5,18 +5,18 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Map" parent="." instance=ExtResource( 2 )]
-
 [node name="PixPlayer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 736.337, 499.725 )
+position = Vector2( 1009.26, 380.948 )
 speed = 75
 
-[node name="Camera2D" type="Camera2D" parent="PixPlayer"]
-position = Vector2( 0, -0.0449047 )
+[node name="ScrollCamera" type="Camera2D" parent="PixPlayer"]
+position = Vector2( 0, -0.0450134 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
-limit_left = -220
-limit_top = -150
-limit_right = 1822
-limit_bottom = 1502
+limit_left = 10
+limit_top = 10
+limit_right = 1140
+limit_bottom = 825
 smoothing_enabled = true
+
+[node name="Map" parent="." instance=ExtResource( 2 )]

@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ProximityLable.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Art/UI/SimpleRoundedWhite.tres" type="Theme" id=3]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 1 )
+tip_text = "TEXT "
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 10
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.5
+margin_top = -20.0
+margin_right = 81.5
+margin_bottom = 20.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.5
+margin_top = -19.5
+margin_right = 81.5
+margin_bottom = 19.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TEXT"
+align = 1
+valign = 1
+
+[connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_Area2D_area_exited"]
