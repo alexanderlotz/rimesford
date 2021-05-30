@@ -56,3 +56,6 @@ func _physics_process(delta):
 
 func get_feet():
 	return feet
+	
+func set_anims(new_frames):
+	$Area2D/AnimatedSprite.frames = new_frames

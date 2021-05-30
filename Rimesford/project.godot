@@ -50,14 +50,11 @@ config/name="Rimesford"
 
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 PlayerData="*res://Scenes/PlayerData.tscn"
+GameState="*res://Scenes/GameState.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
-
-[logging]
-
-file_logging/enable_file_logging=true
+enabled=PoolStringArray(  )
 
 [input]
 
@@ -85,6 +82,10 @@ right={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[logging]
+
+file_logging/enable_file_logging=true
 
 [physics]
 
