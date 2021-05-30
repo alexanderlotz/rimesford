@@ -49,8 +49,6 @@ func _physics_process(delta):
 		else:
 			$Area2D/AnimatedSprite.animation = "idle_back"
 
-
-		
 	# Move the character
 	velocity = move_and_slide(velocity)
 

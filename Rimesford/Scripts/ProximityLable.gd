@@ -5,6 +5,7 @@ extends Area2D
 export var tip_text : String
 export var tip_area : Shape2D
 export var label_offset : Vector2
+export var enabled : bool
 
 var zero_pos : Vector2
 
@@ -29,10 +30,17 @@ func _process(delta):
 #	$Panel.rect_position = zero_pos + label_offset
 
 func _on_Area2D_area_entered(area):
-	if area.get_owner().is_in_group("player"):
+	if enabled and area.get_owner().is_in_group("player"):
 		$Panel.visible = true
 
 
 func _on_Area2D_area_exited(area):
 	if area.get_owner().is_in_group("player"):
 		$Panel.visible = false
+
+
+func is_visible():
+	return $Panel.visible
+	
+func set_tip_text(new_text):
+	$Panel/Label.text = new_text
