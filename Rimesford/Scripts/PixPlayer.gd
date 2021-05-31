@@ -12,6 +12,14 @@ func _ready():
 	feet.x = $Feet.position.x
 	feet.y = $Feet.position.y
 	print(feet)
+	
+	var player_frames = 0
+	if PlayerData.character == "frog":
+		player_frames = load("res://Assets/Art/Sprites/Pixel/FrogAnims.tres")
+	else:
+		player_frames = load("res://Assets/Art/Sprites/Pixel/SkunkAnims.tres")
+		
+	$Area2D/AnimatedSprite.frames = player_frames
 
 # Returns a vector describing the current velocity of the character based
 # on input received

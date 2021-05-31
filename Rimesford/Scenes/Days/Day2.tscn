@@ -14,13 +14,13 @@ total_tasks = 1
 
 [node name="DuckConvo" parent="." instance=ExtResource( 4 )]
 position = Vector2( 747.598, 256.558 )
-dialog_name = "DuckSkunk"
+skunk_dialog = "DuckSkunk"
+frog_dialog = "DuckFrog"
 
 [node name="Duck" type="AnimatedSprite" parent="DuckConvo"]
 position = Vector2( -0.687059, 29.0789 )
 frames = ExtResource( 5 )
 animation = "idle_front"
-frame = 1
 playing = true
 
 [node name="PersonalTask" parent="." instance=ExtResource( 4 )]

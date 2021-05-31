@@ -4,8 +4,11 @@ signal task_completed
 
 # Declare member variables here. Examples:
 var completed = false
-export var dialog_name : String
+export var skunk_dialog : String
+export var frog_dialog : String
 export var tip_text: String
+
+var dialog_name : String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +17,11 @@ func _ready():
 		$ProximityLable.set_tip_text("Press Space to interact")
 	else:
 		$ProximityLable.set_tip_text(tip_text)
-
+		
+	if PlayerData.character == "skunk":
+		dialog_name = skunk_dialog
+	else:
+		dialog_name = frog_dialog
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

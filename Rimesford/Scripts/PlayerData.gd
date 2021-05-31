@@ -1,5 +1,7 @@
 extends Node
 
+var character = "skunk"
+
 # basic axis information 
 var honesty = 0
 var deceit = 0

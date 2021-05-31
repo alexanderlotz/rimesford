@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Art/Sprites/Pixel/HoundAnims.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://Assets/Art/Sprites/Pixel/RaccoonAnims.tres" type="SpriteFrames" id=6]
 
-[node name="Day2" type="Node2D"]
+[node name="Day5" type="Node2D"]
 script = ExtResource( 3 )
 total_tasks = 1
 
@@ -15,20 +15,20 @@ total_tasks = 1
 
 [node name="RaccoonGreyhoundConvo" parent="." instance=ExtResource( 4 )]
 position = Vector2( 827.917, 706.273 )
-dialog_name = "RacGreySkunk"
+skunk_dialog = "RacGreySkunk"
+frog_dialog = "RacGreyFrog"
 
 [node name="Raccoon" type="AnimatedSprite" parent="RaccoonGreyhoundConvo"]
 position = Vector2( 16.0914, 38.2012 )
 frames = ExtResource( 6 )
 animation = "idle_front"
-frame = 3
 playing = true
 
 [node name="Hound" type="AnimatedSprite" parent="RaccoonGreyhoundConvo"]
 position = Vector2( -17.478, 25.2233 )
 frames = ExtResource( 5 )
 animation = "front_idle"
-frame = 1
+frame = 2
 playing = true
 
 [node name="PersonalTask" parent="." instance=ExtResource( 4 )]

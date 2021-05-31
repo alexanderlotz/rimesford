@@ -11,7 +11,6 @@ func _ready():
 	# Set the correct animations for the player
 	tasks_left = total_tasks
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
